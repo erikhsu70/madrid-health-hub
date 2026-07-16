@@ -62,7 +62,7 @@ function PostPage() {
 
       <section className="px-6 py-24">
         <div className="mx-auto max-w-3xl space-y-8">
-          {post.body.map((para, i) => (
+          {post.body.map((para: string, i: number) => (
             <p key={i} className="text-lg leading-relaxed text-foreground/85">
               {para}
             </p>
