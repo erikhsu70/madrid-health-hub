@@ -9,38 +9,153 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BookRouteImport } from './routes/book'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TestsSlugRouteImport } from './routes/tests.$slug'
+import { Route as MembershipsSlugRouteImport } from './routes/memberships.$slug'
+import { Route as BookCheckoutRouteImport } from './routes/book.checkout'
+import { Route as AssessmentsSlugRouteImport } from './routes/assessments.$slug'
 
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TestsSlugRoute = TestsSlugRouteImport.update({
+  id: '/tests/$slug',
+  path: '/tests/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembershipsSlugRoute = MembershipsSlugRouteImport.update({
+  id: '/memberships/$slug',
+  path: '/memberships/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookCheckoutRoute = BookCheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => BookRoute,
+} as any)
+const AssessmentsSlugRoute = AssessmentsSlugRouteImport.update({
+  id: '/assessments/$slug',
+  path: '/assessments/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/book': typeof BookRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/book/checkout': typeof BookCheckoutRoute
+  '/memberships/$slug': typeof MembershipsSlugRoute
+  '/tests/$slug': typeof TestsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/book': typeof BookRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/book/checkout': typeof BookCheckoutRoute
+  '/memberships/$slug': typeof MembershipsSlugRoute
+  '/tests/$slug': typeof TestsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/book': typeof BookRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/book/checkout': typeof BookCheckoutRoute
+  '/memberships/$slug': typeof MembershipsSlugRoute
+  '/tests/$slug': typeof TestsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/book'
+    | '/contact'
+    | '/faq'
+    | '/assessments/$slug'
+    | '/book/checkout'
+    | '/memberships/$slug'
+    | '/tests/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/book'
+    | '/contact'
+    | '/faq'
+    | '/assessments/$slug'
+    | '/book/checkout'
+    | '/memberships/$slug'
+    | '/tests/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/book'
+    | '/contact'
+    | '/faq'
+    | '/assessments/$slug'
+    | '/book/checkout'
+    | '/memberships/$slug'
+    | '/tests/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookRoute: typeof BookRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  AssessmentsSlugRoute: typeof AssessmentsSlugRoute
+  MembershipsSlugRoute: typeof MembershipsSlugRoute
+  TestsSlugRoute: typeof TestsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +163,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tests/$slug': {
+      id: '/tests/$slug'
+      path: '/tests/$slug'
+      fullPath: '/tests/$slug'
+      preLoaderRoute: typeof TestsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/memberships/$slug': {
+      id: '/memberships/$slug'
+      path: '/memberships/$slug'
+      fullPath: '/memberships/$slug'
+      preLoaderRoute: typeof MembershipsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book/checkout': {
+      id: '/book/checkout'
+      path: '/checkout'
+      fullPath: '/book/checkout'
+      preLoaderRoute: typeof BookCheckoutRouteImport
+      parentRoute: typeof BookRoute
+    }
+    '/assessments/$slug': {
+      id: '/assessments/$slug'
+      path: '/assessments/$slug'
+      fullPath: '/assessments/$slug'
+      preLoaderRoute: typeof AssessmentsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface BookRouteChildren {
+  BookCheckoutRoute: typeof BookCheckoutRoute
+}
+
+const BookRouteChildren: BookRouteChildren = {
+  BookCheckoutRoute: BookCheckoutRoute,
+}
+
+const BookRouteWithChildren = BookRoute._addFileChildren(BookRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookRoute: BookRouteWithChildren,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  AssessmentsSlugRoute: AssessmentsSlugRoute,
+  MembershipsSlugRoute: MembershipsSlugRoute,
+  TestsSlugRoute: TestsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
