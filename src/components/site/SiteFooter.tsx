@@ -21,6 +21,7 @@ export function SiteFooter() {
             <FooterLink to="/tests/vo2max">Individual Tests</FooterLink>
           </FooterCol>
           <FooterCol title="Studio">
+            <FooterLink to="/blog">Journal</FooterLink>
             <FooterLink to="/faq">FAQ</FooterLink>
             <FooterLink to="/contact">Contact</FooterLink>
             <FooterLink to="/faq">Privacy</FooterLink>
