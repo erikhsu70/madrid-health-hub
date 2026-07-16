@@ -12,10 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookRouteImport } from './routes/book'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TestsSlugRouteImport } from './routes/tests.$slug'
 import { Route as MembershipsSlugRouteImport } from './routes/memberships.$slug'
 import { Route as BookCheckoutRouteImport } from './routes/book.checkout'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as AssessmentsSlugRouteImport } from './routes/assessments.$slug'
 
 const FaqRoute = FaqRouteImport.update({
@@ -31,6 +33,11 @@ const ContactRoute = ContactRouteImport.update({
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +60,11 @@ const BookCheckoutRoute = BookCheckoutRouteImport.update({
   path: '/checkout',
   getParentRoute: () => BookRoute,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 const AssessmentsSlugRoute = AssessmentsSlugRouteImport.update({
   id: '/assessments/$slug',
   path: '/assessments/$slug',
@@ -61,20 +73,24 @@ const AssessmentsSlugRoute = AssessmentsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/book/checkout': typeof BookCheckoutRoute
   '/memberships/$slug': typeof MembershipsSlugRoute
   '/tests/$slug': typeof TestsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/book/checkout': typeof BookCheckoutRoute
   '/memberships/$slug': typeof MembershipsSlugRoute
   '/tests/$slug': typeof TestsSlugRoute
@@ -82,10 +98,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/book': typeof BookRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/assessments/$slug': typeof AssessmentsSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/book/checkout': typeof BookCheckoutRoute
   '/memberships/$slug': typeof MembershipsSlugRoute
   '/tests/$slug': typeof TestsSlugRoute
@@ -94,30 +112,36 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/faq'
     | '/assessments/$slug'
+    | '/blog/$slug'
     | '/book/checkout'
     | '/memberships/$slug'
     | '/tests/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/faq'
     | '/assessments/$slug'
+    | '/blog/$slug'
     | '/book/checkout'
     | '/memberships/$slug'
     | '/tests/$slug'
   id:
     | '__root__'
     | '/'
+    | '/blog'
     | '/book'
     | '/contact'
     | '/faq'
     | '/assessments/$slug'
+    | '/blog/$slug'
     | '/book/checkout'
     | '/memberships/$slug'
     | '/tests/$slug'
@@ -125,6 +149,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRouteWithChildren
   BookRoute: typeof BookRouteWithChildren
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
@@ -156,6 +181,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -184,6 +216,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookCheckoutRouteImport
       parentRoute: typeof BookRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/assessments/$slug': {
       id: '/assessments/$slug'
       path: '/assessments/$slug'
@@ -193,6 +232,16 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface BookRouteChildren {
   BookCheckoutRoute: typeof BookCheckoutRoute
@@ -206,6 +255,7 @@ const BookRouteWithChildren = BookRoute._addFileChildren(BookRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRouteWithChildren,
   BookRoute: BookRouteWithChildren,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,

@@ -25,6 +25,9 @@ export function SiteHeader() {
             <MenuTrigger label="Memberships" active={open === "memberships"} onOpen={() => setOpen("memberships")} />
             <MenuTrigger label="Assessments" active={open === "assessments"} onOpen={() => setOpen("assessments")} />
             <MenuTrigger label="Tests" active={open === "tests"} onOpen={() => setOpen("tests")} />
+            <Link to="/blog" className="py-5 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
+              Journal
+            </Link>
             <Link to="/faq" className="py-5 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
               FAQ
             </Link>
