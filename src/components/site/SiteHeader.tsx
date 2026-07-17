@@ -82,7 +82,7 @@ function MenuTrigger({ label, active, onOpen }: { label: string; active: boolean
     <button
       onMouseEnter={onOpen}
       onFocus={onOpen}
-      className={`py-2 transition-colors ${active ? "text-foreground" : "hover:text-foreground"}`}
+      className={`py-2 transition-opacity ${active ? "opacity-100" : "opacity-80 hover:opacity-100"}`}
     >
       {label}
     </button>
