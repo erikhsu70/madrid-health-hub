@@ -8,7 +8,7 @@ export const Route = createFileRoute("/book/checkout")({
   component: Checkout,
   head: () => ({
     meta: [
-      { title: "Checkout — Volumes Lab Madrid" },
+      { title: "Checkout, Volumes Lab Madrid" },
       { name: "description", content: "Review your booking and complete your appointment at Volumes Lab." },
       { name: "robots", content: "noindex" },
     ],
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/book/checkout")({
 const nextSteps = [
   { title: "You submit the request", body: "No payment is taken today. This simply reserves your preferred items." },
   { title: "We confirm within 24h", body: "Our team emails you personally to agree a date and answer any questions." },
-  { title: "You arrive prepared", body: "We send exact preparation instructions for your tests — fasting, clothing, timing." },
+  { title: "You arrive prepared", body: "We send exact preparation instructions for your tests, fasting, clothing, timing." },
 ];
 
 function Checkout() {
@@ -128,7 +128,7 @@ function Checkout() {
                   }}
                   className="flex-1 bg-foreground py-4 font-mono text-xs uppercase tracking-widest text-primary-foreground hover:opacity-80"
                 >
-                  Submit booking request — €{total}
+                  Submit booking request · €{total}
                 </button>
                 <Link
                   to="/book"

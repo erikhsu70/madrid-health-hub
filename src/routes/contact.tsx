@@ -9,9 +9,9 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact — Volumes Lab Madrid" },
+      { title: "Contact, Volumes Lab Madrid" },
       { name: "description", content: "Visit Volumes Lab at Calle Churruca 5, Chamberí, Madrid. Email, phone, WhatsApp, metro and parking." },
-      { property: "og:title", content: "Contact — Volumes Lab Madrid" },
+      { property: "og:title", content: "Contact, Volumes Lab Madrid" },
       { property: "og:description", content: "Calle Churruca 5, Madrid. Reach the team." },
     ],
   }),
@@ -28,7 +28,7 @@ function Contact() {
             Come see the lab.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted">
-            Fifteen minutes from anywhere in central Madrid. Drop in for a look around —
+            Fifteen minutes from anywhere in central Madrid. Drop in for a look around ·
             the coffee is on us and there is no sales pitch, we promise.
           </p>
         </div>
@@ -76,11 +76,11 @@ function Contact() {
             >
               <p className="font-mono text-xs uppercase tracking-widest text-foreground">[ Send a message ]</p>
               <p className="text-sm text-muted">
-                We reply within one working day — usually much faster.
+                We reply within one working day, usually much faster.
               </p>
               <input required name="name" placeholder="Your name" className="w-full border border-border bg-transparent px-4 py-3 text-sm focus:border-foreground focus:outline-none" />
               <input required name="email" type="email" placeholder="Email" className="w-full border border-border bg-transparent px-4 py-3 text-sm focus:border-foreground focus:outline-none" />
-              <textarea required name="message" placeholder="Tell us what you're trying to change — we'll point you to the right test" rows={5} className="w-full border border-border bg-transparent px-4 py-3 text-sm focus:border-foreground focus:outline-none" />
+              <textarea required name="message" placeholder="Tell us what you're trying to change, we'll point you to the right test" rows={5} className="w-full border border-border bg-transparent px-4 py-3 text-sm focus:border-foreground focus:outline-none" />
               <button className="bg-foreground px-6 py-3 font-mono text-xs uppercase tracking-widest text-primary-foreground hover:opacity-80">
                 {sent ? "Sent ✓" : "Send message"}
               </button>

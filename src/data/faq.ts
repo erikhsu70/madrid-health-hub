@@ -18,7 +18,7 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "Do I need to be fit to come?",
-        a: "No. Most of our clients are starting from scratch — the whole point is to measure where you are today. Protocols adapt to every level.",
+        a: "No. Most of our clients are starting from scratch, the whole point is to measure where you are today. Protocols adapt to every level.",
       },
     ],
   },
@@ -31,11 +31,11 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "What should I wear?",
-        a: "Comfortable training clothes and the shoes you usually train in. For 3-D body composition scans, minimal tight-fitting attire works best — we have changing rooms and everything you need.",
+        a: "Comfortable training clothes and the shoes you usually train in. For 3-D body composition scans, minimal tight-fitting attire works best, we have changing rooms and everything you need.",
       },
       {
         q: "How long will I be in the lab?",
-        a: "Individual tests run 15–60 minutes, the Foundations assessment 90 minutes, and the Longevity and Performance assessments around 3 hours — including your debrief.",
+        a: "Individual tests run 15–60 minutes, the Foundations assessment 90 minutes, and the Longevity and Performance assessments around 3 hours, including your debrief.",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "Can you share results with my doctor or coach?",
-        a: "Yes — with your explicit permission, we send the full report directly to them.",
+        a: "Yes, with your explicit permission, we send the full report directly to them.",
       },
     ],
   },
@@ -65,11 +65,11 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "How much radiation does the bone density scan use?",
-        a: "Very little — roughly a tenth of a chest X-ray, comparable to a few hours of natural background radiation.",
+        a: "Very little, roughly a tenth of a chest X-ray, comparable to a few hours of natural background radiation.",
       },
       {
         q: "Is the GLP-1 program right for everyone?",
-        a: "No — and we say so when it isn't. Eligibility is decided by our physicians at intake based on your health profile and contraindications. Consultation first, prescription only if appropriate.",
+        a: "No, and we say so when it isn't. Eligibility is decided by our physicians at intake based on your health profile and contraindications. Consultation first, prescription only if appropriate.",
       },
       {
         q: "Do you accept insurance?",
@@ -95,15 +95,15 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
     items: [
       {
         q: "Where are you located?",
-        a: "Calle Churruca 5, Madrid — in the heart of Chamberí. See the Contact page for directions, metro and parking.",
+        a: "Calle Churruca 5, Madrid, in the heart of Chamberí. See the Contact page for directions, metro and parking.",
       },
       {
         q: "Do you offer memberships?",
-        a: "Yes — our Health & Performance and GLP-1 memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
+        a: "Yes, our Health & Performance and GLP-1 memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
       },
       {
         q: "What languages do you speak?",
-        a: "The full experience — testing, debriefs and reports — is available in English and Spanish.",
+        a: "The full experience, testing, debriefs and reports, is available in English and Spanish.",
       },
     ],
   },

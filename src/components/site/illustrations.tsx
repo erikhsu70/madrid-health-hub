@@ -1,4 +1,4 @@
-// Technical "lab blueprint" SVG illustrations — one per product.
+// Technical "lab blueprint" SVG illustrations · one per product.
 // Monochrome, instrument-style schematics that match the site design system.
 // When real photography exists, swap these slots for images.
 
@@ -51,7 +51,7 @@ function Vo2max() {
       <Label x={257} y={284}>VT2</Label>
       <Crosshair x={370} y={78} />
       <Label x={300} y={60}>VO2MAX 46.2</Label>
-      <Label x={30} y={30}>O2 UPTAKE — ML/KG/MIN</Label>
+      <Label x={30} y={30}>O2 UPTAKE · ML/KG/MIN</Label>
       <line x1="30" y1="270" x2="380" y2="270" {...S} opacity="0.4" />
     </g>
   );
@@ -75,7 +75,7 @@ function BodyComp() {
       <Label x={285} y={88}>LEAN 61.2 KG</Label>
       <Label x={285} y={166}>FAT 18.4%</Label>
       <Crosshair x={200} y={150} />
-      <Label x={30} y={30}>3-D SCAN — 30 SEC</Label>
+      <Label x={30} y={30}>3-D SCAN · 30 SEC</Label>
     </g>
   );
 }
@@ -101,7 +101,7 @@ function Bone() {
       <Label x={236} y={244}>T-SCORE −0.4</Label>
       <Label x={52} y={244}>−2.5</Label>
       <Label x={330} y={244}>+2.0</Label>
-      <Label x={30} y={30}>DXA — LUMBAR + HIP</Label>
+      <Label x={30} y={30}>DXA · LUMBAR + HIP</Label>
     </g>
   );
 }
@@ -122,7 +122,7 @@ function Gait() {
       <Label x={56} y={90}>172 SPM</Label>
       <Crosshair x={300} y={185} />
       <Label x={288} y={165}>ASYM 3.1%</Label>
-      <Label x={30} y={30}>FOOTFALL — 3-D CAPTURE</Label>
+      <Label x={30} y={30}>FOOTFALL · 3-D CAPTURE</Label>
     </g>
   );
 }
@@ -146,8 +146,8 @@ function Grip() {
       {/* needle at ~72% */}
       <line x1="200" y1="220" x2={200 + 100 * Math.cos((-49 * Math.PI) / 180)} y2={220 + 100 * Math.sin((-49 * Math.PI) / 180)} {...S} strokeWidth="2.5" />
       <circle cx="200" cy="220" r="6" {...S} strokeWidth="2" />
-      <Label x={176} y={262}>44 KG — P72</Label>
-      <Label x={30} y={30}>DYNAMOMETRY — PEAK FORCE</Label>
+      <Label x={176} y={262}>44 KG · P72</Label>
+      <Label x={30} y={30}>DYNAMOMETRY · PEAK FORCE</Label>
     </g>
   );
 }
@@ -181,7 +181,7 @@ function Mobility() {
       <Crosshair x={290} y={150} />
       <Label x={282} y={132}>88°</Label>
       <Label x={206} y={200}>SHOULDER ER</Label>
-      <Label x={30} y={30}>ACTIVE RANGE — DEG</Label>
+      <Label x={30} y={30}>ACTIVE RANGE · DEG</Label>
     </g>
   );
 }
@@ -196,7 +196,7 @@ function Strength() {
       <line x1="60" y1="86" x2="270" y2="86" {...DASH} />
       <Label x={150} y={74}>PEAK 2.4× BW</Label>
       <Crosshair x={180} y={80} />
-      <Label x={30} y={30}>FORCE — TIME · IMTP</Label>
+      <Label x={30} y={30}>FORCE · TIME · IMTP</Label>
       <Label x={290} y={268}>3 SEC HOLD</Label>
     </g>
   );
@@ -227,7 +227,7 @@ function Foundations() {
         <line x1="280" y1="230" x2="302" y2="208" {...S} strokeWidth="2" />
         <Label x={242} y={248}>MOBILITY 86</Label>
       </g>
-      <Label x={30} y={30}>BASELINE BATTERY — 4 PILLARS</Label>
+      <Label x={30} y={30}>BASELINE BATTERY · 4 PILLARS</Label>
     </g>
   );
 }
@@ -257,9 +257,9 @@ function Performance() {
       <line x1="30" y1="212" x2="370" y2="212" {...DASH} />
       <line x1="228" y1="188" x2="228" y2="270" {...DASH} />
       <Crosshair x={228} y={188} />
-      <Label x={238} y={180}>LT2 — 172 BPM</Label>
+      <Label x={238} y={180}>LT2 · 172 BPM</Label>
       <Label x={30} y={200}>4 MMOL</Label>
-      <Label x={30} y={30}>LACTATE CURVE — MMOL/L</Label>
+      <Label x={30} y={30}>LACTATE CURVE · MMOL/L</Label>
     </g>
   );
 }
@@ -281,7 +281,7 @@ function Membership() {
         );
       })}
       <Label x={270} y={52}>+9.2% VO2MAX</Label>
-      <Label x={30} y={30}>PROGRESS — 12 MONTHS</Label>
+      <Label x={30} y={30}>PROGRESS · 12 MONTHS</Label>
     </g>
   );
 }
@@ -302,7 +302,7 @@ function Glp1() {
       })}
       <Label x={252} y={168}>MD CHECK-INS</Label>
       <Label x={284} y={208}>−6.2 KG / 12 WK</Label>
-      <Label x={30} y={30}>WEIGHT — SUPERVISED</Label>
+      <Label x={30} y={30}>WEIGHT · SUPERVISED</Label>
     </g>
   );
 }
@@ -328,7 +328,7 @@ function CardioPack() {
       <Label x={240} y={252}>Z4</Label>
       <Label x={300} y={252}>Z5</Label>
       <Crosshair x={198} y={120} />
-      <Label x={30} y={30}>4 SESSIONS — ZONE COACHED</Label>
+      <Label x={30} y={30}>4 SESSIONS · ZONE COACHED</Label>
     </g>
   );
 }
@@ -342,9 +342,9 @@ function PtPack() {
         const h = 30 + i * 14;
         return <rect key={i} x={48 + i * 31} y={240 - h} width="18" height={h} {...S} strokeWidth={i === 9 ? 2.5 : 1.5} />;
       })}
-      <Label x={286} y={60}>S10 — RETEST</Label>
+      <Label x={286} y={60}>S10 · RETEST</Label>
       <Crosshair x={332} y={62} />
-      <Label x={30} y={30}>10 SESSIONS — 1:1</Label>
+      <Label x={30} y={30}>10 SESSIONS · 1:1</Label>
     </g>
   );
 }
@@ -365,7 +365,7 @@ function Retest() {
       ))}
       <Label x={30} y={268}>MO 0</Label>
       <Label x={330} y={268}>MO 12</Label>
-      <Label x={30} y={30}>QUARTERLY RETESTS — 12 MO</Label>
+      <Label x={30} y={30}>QUARTERLY RETESTS · 12 MO</Label>
     </g>
   );
 }

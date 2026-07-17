@@ -10,7 +10,7 @@ const categoryProduct: Record<string, { slug: string; kind: string; name: string
     slug: "vo2max",
     kind: "test",
     name: "VO2Max Test",
-    pitch: "Reading about VO2max is step one. Measuring yours takes 60 minutes — mask, treadmill, real numbers.",
+    pitch: "Reading about VO2max is step one. Measuring yours takes 60 minutes, mask, treadmill, real numbers.",
   },
   Training: {
     slug: "strength-assessment",
@@ -22,7 +22,7 @@ const categoryProduct: Record<string, { slug: string; kind: string; name: string
     slug: "3d-body-composition",
     kind: "test",
     name: "3-D Body Composition",
-    pitch: "See what you're actually made of — a 30-second scan and a same-day walkthrough.",
+    pitch: "See what you're actually made of, a 30-second scan and a same-day walkthrough.",
   },
 };
 
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Article not found — Volumes Lab" },
+          { title: "Article not found, Volumes Lab" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post } = loaderData;
     return {
       meta: [
-        { title: `${post.title} — Volumes Lab` },
+        { title: `${post.title}, Volumes Lab` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
@@ -116,7 +116,7 @@ function PostPage() {
           <p className="mt-3 font-display text-xl font-bold uppercase tracking-tight">Volumes Lab</p>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
             The medical and performance team at Calle Churruca 5, Madrid. Every article is written
-            from the lab floor — by the people who run the tests, not a content agency.
+            from the lab floor, by the people who run the tests, not a content agency.
           </p>
         </div>
       </section>

@@ -16,9 +16,9 @@ export const Route = createFileRoute("/book")({
   component: BookIndex,
   head: () => ({
     meta: [
-      { title: "Book Appointment — Volumes Lab Madrid" },
+      { title: "Book Appointment, Volumes Lab Madrid" },
       { name: "description", content: "Book memberships, complete assessments, individual tests and packages at Volumes Lab, Calle Churruca 5, Madrid." },
-      { property: "og:title", content: "Book Appointment — Volumes Lab Madrid" },
+      { property: "og:title", content: "Book Appointment, Volumes Lab Madrid" },
       { property: "og:description", content: "Add memberships, assessments, tests and packages to your cart." },
     ],
   }),
@@ -33,7 +33,7 @@ const bookFaqs = [
   },
   {
     q: "Can I change my appointment?",
-    a: "Yes — cancel or reschedule free of charge up to 48 hours before. Within 48 hours, a 50% fee applies.",
+    a: "Yes, cancel or reschedule free of charge up to 48 hours before. Within 48 hours, a 50% fee applies.",
   },
   {
     q: "How do gift cards work?",
@@ -79,10 +79,10 @@ function BookIndex() {
                 The Foundations assessment
               </h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed opacity-80">
-                90 minutes, four pillars — body composition, strength, mobility, metabolism — and a
+                90 minutes, four pillars, body composition, strength, mobility, metabolism, and a
                 clinical debrief with your action plan. The baseline everything else builds on.
               </p>
-              <p className="mt-6 font-mono text-[11px] uppercase tracking-widest">€490 — View →</p>
+              <p className="mt-6 font-mono text-[11px] uppercase tracking-widest">€490, View →</p>
             </Link>
             <Link
               to="/contact"
@@ -93,7 +93,7 @@ function BookIndex() {
                 A free 15-minute call
               </h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
-                Tell us what you're trying to change and we'll tell you honestly which test fits —
+                Tell us what you're trying to change and we'll tell you honestly which test fits ·
                 and which ones you don't need.
               </p>
               <p className="mt-6 font-mono text-[11px] uppercase tracking-widest text-muted group-hover:text-foreground">
@@ -109,7 +109,7 @@ function BookIndex() {
                 Give data, not stuff
               </h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
-                Every test, assessment and package is available as a gift card — from €40 grip tests
+                Every test, assessment and package is available as a gift card, from €40 grip tests
                 to the full Longevity workup.
               </p>
               <p className="mt-6 font-mono text-[11px] uppercase tracking-widest text-muted group-hover:text-foreground">
@@ -147,9 +147,9 @@ function BookIndex() {
               email you a code the recipient can redeem whenever suits them.
             </p>
             <ul className="mt-8 space-y-3 font-mono text-[11px] uppercase tracking-widest text-muted">
-              <li>— Valid 12 months</li>
-              <li>— Delivered by email, instantly</li>
-              <li>— Recipient books their own date</li>
+              <li>· Valid 12 months</li>
+              <li>· Delivered by email, instantly</li>
+              <li>· Recipient books their own date</li>
             </ul>
           </div>
         </div>
@@ -193,7 +193,7 @@ function ComparisonTable() {
     {
       label: "Best for",
       values: [
-        "First visit — everyone",
+        "First visit, everyone",
         "Healthspan & prevention",
         "Athletes chasing numbers",
       ],
@@ -259,7 +259,7 @@ function CatalogSection({ title, items, note }: { title: string; items: Product[
           </h2>
           <p className="font-mono text-[10px] uppercase tracking-widest text-muted">
             {items.length} {items.length === 1 ? "item" : "items"}
-            {note ? ` — ${note}` : ""}
+            {note ? `, ${note}` : ""}
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -312,7 +312,7 @@ function ProductCard({ product }: { product: Product }) {
           }}
           className="bg-foreground py-2 font-mono text-[10px] uppercase tracking-widest text-primary-foreground hover:opacity-80"
         >
-          Book — €{product.price}
+          Book · €{product.price}
         </button>
         {product.giftable ? (
           <button

@@ -80,7 +80,7 @@ export function ProductPage({ product }: { product: Product }) {
               <figure className="mt-10 border border-border bg-card p-4">
                 <ProductIllustration k={content.illustration} className="h-auto w-full" />
                 <figcaption className="mt-3 border-t border-border pt-3 font-mono text-[9px] uppercase tracking-widest text-muted">
-                  Fig. 01 — measured on lab-grade equipment at Calle Churruca 5
+                  Fig. 01, measured on lab-grade equipment at Calle Churruca 5
                 </figcaption>
               </figure>
             </div>
@@ -118,7 +118,7 @@ export function ProductPage({ product }: { product: Product }) {
                     onClick={addToCart}
                     className="mt-4 block w-full bg-foreground py-4 text-center font-mono text-xs uppercase tracking-widest text-primary-foreground transition-colors hover:opacity-80"
                   >
-                    {gift ? `Add gift card — €${product.price}` : `Book ${product.name} — €${product.price}`}
+                    {gift ? `Add gift card · €${product.price}` : `Book ${product.name} · €${product.price}`}
                   </button>
                   <p className="mt-4 text-center font-mono text-[9px] uppercase tracking-widest text-muted">
                     Free reschedule up to 48h before
@@ -180,7 +180,7 @@ export function ProductPage({ product }: { product: Product }) {
             <SectionTitle className="mt-6">This is what "data-led" actually looks like.</SectionTitle>
             <p className="mt-6 text-base leading-relaxed text-muted">
               Every result is benchmarked against your age group and reviewed with you in person.
-              P50 is the average for your age — we aim well above it.
+              P50 is the average for your age, we aim well above it.
             </p>
           </div>
           <div className="lg:col-span-8">
@@ -263,7 +263,7 @@ export function ProductPage({ product }: { product: Product }) {
         price={product.price}
         duration={product.duration}
         onAdd={addToCart}
-        ctaLabel={`Book — €${product.price}`}
+        ctaLabel={`Book · €${product.price}`}
       />
     </div>
   );

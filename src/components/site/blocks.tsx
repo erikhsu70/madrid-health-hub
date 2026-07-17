@@ -52,7 +52,7 @@ export function TestimonialBand({ items }: { items: { quote: string; name: strin
           <figure key={i} className="w-[22rem] shrink-0">
             <blockquote className="text-base leading-relaxed text-foreground/85">“{t.quote}”</blockquote>
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-widest text-muted">
-              {t.name} — {t.detail}
+              {t.name}, {t.detail}
             </figcaption>
           </figure>
         ))}
@@ -67,7 +67,7 @@ export function TestimonialCard({ quote, name, detail }: { quote: string; name: 
       <p aria-hidden className="font-display text-5xl font-extrabold leading-none text-foreground/20">”</p>
       <blockquote className="mt-2 text-lg leading-relaxed text-foreground/85">“{quote}”</blockquote>
       <figcaption className="mt-6 border-t border-border pt-4 font-mono text-[10px] uppercase tracking-widest text-muted">
-        {name} — {detail}
+        {name}, {detail}
       </figcaption>
     </figure>
   );
@@ -202,7 +202,7 @@ export function PrepList({ items }: { items: string[] }) {
     <ul className="space-y-3">
       {items.map((p, i) => (
         <li key={i} className="flex gap-3 text-base text-muted">
-          <span aria-hidden className="mt-0.5 font-mono text-[10px] text-foreground">—</span>
+          <span aria-hidden className="mt-0.5 font-mono text-[10px] text-foreground">· </span>
           {p}
         </li>
       ))}
