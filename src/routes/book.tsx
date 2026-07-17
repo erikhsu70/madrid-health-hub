@@ -3,7 +3,7 @@ import { SiteChrome } from "@/components/site/SiteChrome";
 import { memberships, assessments, tests, packages, type Product } from "@/data/catalog";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
-import { BookBand } from "@/components/site/BookBand";
+
 
 export const Route = createFileRoute("/book")({
   component: BookIndex,
@@ -44,7 +44,7 @@ function CatalogSection({ title, items }: { title: string; items: Product[] }) {
     <section className="border-b border-border px-6 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex items-baseline justify-between">
-          <h2 className="font-display text-3xl font-extrabold uppercase italic tracking-tight md:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight md:text-4xl">
             {title}
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
