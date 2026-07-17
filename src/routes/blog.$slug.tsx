@@ -13,7 +13,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Article not found — Volumes Lab" },
+          { title: "Article not found, Volumes Lab" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post } = loaderData;
     return {
       meta: [
-        { title: `${post.title} — Volumes Lab` },
+        { title: `${post.title}, Volumes Lab` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/book/checkout")({
   component: Checkout,
   head: () => ({
     meta: [
-      { title: "Checkout — Volumes Lab Madrid" },
+      { title: "Checkout, Volumes Lab Madrid" },
       { name: "description", content: "Review your booking and complete your appointment at Volumes Lab." },
       { name: "robots", content: "noindex" },
     ],

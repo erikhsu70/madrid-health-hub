@@ -6,13 +6,13 @@ export const Route = createFileRoute("/blog")({
   component: BlogIndex,
   head: () => ({
     meta: [
-      { title: "Journal — Volumes Lab Madrid" },
+      { title: "Journal, Volumes Lab Madrid" },
       {
         name: "description",
         content:
           "Field notes on VO2max, strength, body composition and longevity from the Volumes performance lab in Madrid.",
       },
-      { property: "og:title", content: "Journal — Volumes Lab Madrid" },
+      { property: "og:title", content: "Journal, Volumes Lab Madrid" },
       {
         property: "og:description",
         content: "Field notes on performance testing and longevity training.",

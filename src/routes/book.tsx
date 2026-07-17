@@ -9,9 +9,9 @@ export const Route = createFileRoute("/book")({
   component: BookIndex,
   head: () => ({
     meta: [
-      { title: "Book Appointment — Volumes Lab Madrid" },
+      { title: "Book Appointment, Volumes Lab Madrid" },
       { name: "description", content: "Book memberships, complete assessments, individual tests and packages at Volumes Lab in Madrid." },
-      { property: "og:title", content: "Book Appointment — Volumes Lab Madrid" },
+      { property: "og:title", content: "Book Appointment, Volumes Lab Madrid" },
       { property: "og:description", content: "Add memberships, assessments, tests and packages to your cart." },
     ],
   }),

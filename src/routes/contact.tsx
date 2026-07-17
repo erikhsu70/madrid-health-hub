@@ -7,9 +7,9 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact — Volumes Lab Madrid" },
+      { title: "Contact, Volumes Lab Madrid" },
       { name: "description", content: "Get in touch with Volumes Lab. Calle Churruca 5, Madrid. Email, phone, and directions." },
-      { property: "og:title", content: "Contact — Volumes Lab Madrid" },
+      { property: "og:title", content: "Contact, Volumes Lab Madrid" },
       { property: "og:description", content: "Calle Churruca 5, Madrid. Reach the team." },
     ],
   }),
