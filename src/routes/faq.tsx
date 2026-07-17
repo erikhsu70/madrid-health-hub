@@ -6,9 +6,9 @@ export const Route = createFileRoute("/faq")({
   component: FaqPage,
   head: () => ({
     meta: [
-      { title: "FAQ — Volumes Lab Madrid" },
+      { title: "FAQ, Volumes Lab Madrid" },
       { name: "description", content: "Answers to common questions about testing, memberships, gift cards and bookings at Volumes Lab." },
-      { property: "og:title", content: "FAQ — Volumes Lab Madrid" },
+      { property: "og:title", content: "FAQ, Volumes Lab Madrid" },
       { property: "og:description", content: "Preparation, cancellations, gift cards and more." },
     ],
   }),

@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     q: "Do you offer memberships?",
-    a: "Yes — our Health & Performance and GLP-1 memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
+    a: "Yes, our Health & Performance and GLP-1 memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
   },
   {
     q: "Where are you located?",
-    a: "Calle Churruca 5, Madrid — in the heart of Chamberí. See the Contact page for directions.",
+    a: "Calle Churruca 5, Madrid, in the heart of Chamberí. See the Contact page for directions.",
   },
   {
     q: "Do you accept insurance?",

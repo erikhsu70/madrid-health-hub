@@ -42,7 +42,7 @@ function Home() {
           <div className="mt-12 grid items-start gap-16 md:grid-cols-2">
             <div className="relative aspect-square overflow-hidden rounded-sm md:aspect-auto md:h-full md:min-h-[520px]">
               <iframe
-                title="Volumes Lab — Calle Churruca 5, Madrid"
+                title="Volumes Lab, Calle Churruca 5, Madrid"
                 src="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain&output=embed"
                 className="h-full min-h-[500px] w-full grayscale-[.2]"
                 loading="lazy"
@@ -61,18 +61,18 @@ function Home() {
               </h2>
               <div className="space-y-6 text-lg leading-relaxed text-muted">
                 <p>
-                  You've spent decades building a career. Your body deserves the same attention — and,
+                  You've spent decades building a career. Your body deserves the same attention, and,
                   finally, the same quality of data.
                 </p>
                 <p>
                   Volumes brings together the team, the technology and the expertise to understand your
                   health and lift your performance, all under one roof. Our medical and performance team
-                  measures what actually matters — VO2max, strength, mobility, metabolism, body composition
-                  — and turns those numbers into a plan that's yours alone. When it helps, we can prescribe
+                  measures what actually matters, VO2max, strength, mobility, metabolism, body composition
+                 , and turns those numbers into a plan that's yours alone. When it helps, we can prescribe
                   and oversee treatments too, including peptide therapies such as GLP-1 agonists.
                 </p>
                 <p>
-                  Come in for a single test. Book a full assessment. Or join us for the long game — a
+                  Come in for a single test. Book a full assessment. Or join us for the long game, a
                   membership that blends personal training, medical oversight and regular retesting, so
                   you're not guessing about your health. You're watching it improve.
                 </p>
@@ -99,7 +99,7 @@ function Home() {
             <Step
               n="01"
               title="Measure"
-              body="We test what matters, properly — VO2max, strength, mobility, metabolism, body composition — on lab-grade equipment, with a medical team reading every result. No wearable estimates. No wishful thinking."
+              body="We test what matters, properly, VO2max, strength, mobility, metabolism, body composition, on lab-grade equipment, with a medical team reading every result. No wearable estimates. No wishful thinking."
             />
             <Step
               n="02"
@@ -109,7 +109,7 @@ function Home() {
             <Step
               n="03"
               title="Improve"
-              body="Then we get to work — training, treating, retesting. Because a single snapshot tells you where you are. We're here for where you're going."
+              body="Then we get to work, training, treating, retesting. Because a single snapshot tells you where you are. We're here for where you're going."
             />
           </div>
 
@@ -126,7 +126,7 @@ function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionEyebrow>What we measure</SectionEyebrow>
           <h2 className="mt-8 max-w-5xl font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight text-balance md:text-6xl">
-            The numbers that quietly decide how well — and how long — you'll live.
+            The numbers that quietly decide how well, and how long, you'll live.
           </h2>
 
           <ul className="mt-16 divide-y divide-border border-y border-border">
@@ -169,7 +169,7 @@ function Home() {
             The best time to measure was ten years ago. The second best is now.
           </h2>
           <p className="mx-auto mt-8 max-w-2xl text-lg text-muted">
-            Your healthspan isn't a mystery — it's a set of numbers waiting to be read. Come read them with
+            Your healthspan isn't a mystery, it's a set of numbers waiting to be read. Come read them with
             us.
           </p>
           <div className="mt-10 flex justify-center">

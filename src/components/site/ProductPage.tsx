@@ -83,7 +83,7 @@ function DetailBlock({ title, items, numbered }: { title: string; items: string[
         {items.map((it, i) => (
           <li key={i} className="flex gap-4 border-t border-border pt-4">
             <span className="font-mono text-[10px] text-muted">
-              {numbered ? String(i + 1).padStart(2, "0") : "—"}
+              {numbered ? String(i + 1).padStart(2, "0") : ", "}
             </span>
             <span className="text-sm text-foreground">{it}</span>
           </li>
