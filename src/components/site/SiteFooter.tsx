@@ -9,7 +9,7 @@ export function SiteFooter() {
             <img
               src="/volumes-lab-logo.png"
               alt="Volumes Lab"
-              className="mb-4 h-6 w-auto brightness-0 invert"
+              className="mb-4 h-8 w-auto invert"
             />
             <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-400">
               Calle Churruca 5, Madrid
