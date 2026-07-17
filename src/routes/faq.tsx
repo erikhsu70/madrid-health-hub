@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteChrome } from "@/components/site/SiteChrome";
-import { faqs } from "@/data/faq";
+import { BookBand } from "@/components/site/BookBand";
+import { Eyebrow, FaqList } from "@/components/site/blocks";
+import { faqGroups } from "@/data/faq";
 
 export const Route = createFileRoute("/faq")({
   component: FaqPage,
   head: () => ({
     meta: [
       { title: "FAQ — Volumes Lab Madrid" },
-      { name: "description", content: "Answers to common questions about testing, memberships, gift cards and bookings at Volumes Lab." },
+      { name: "description", content: "Answers to common questions about testing, preparation, results, memberships and gift cards at Volumes Lab, Madrid." },
       { property: "og:title", content: "FAQ — Volumes Lab Madrid" },
       { property: "og:description", content: "Preparation, cancellations, gift cards and more." },
     ],
@@ -19,28 +21,32 @@ function FaqPage() {
     <SiteChrome>
       <section className="border-b border-border px-6 py-24">
         <div className="mx-auto max-w-4xl">
-          <p className="mb-6 font-mono text-xs uppercase tracking-widest text-primary">[ Frequently asked ]</p>
-          <h1 className="font-display text-5xl font-extrabold tracking-tight md:text-7xl">Questions.</h1>
+          <Eyebrow>Frequently asked</Eyebrow>
+          <h1 className="mt-6 font-display text-5xl font-extrabold tracking-tight md:text-7xl">
+            Questions.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-muted">
+            Everything people ask before their first visit. Something missing?
+            Call <a href="tel:+34910000000" className="underline underline-offset-4 hover:text-foreground">+34 910 000 000</a> and
+            ask a human.
+          </p>
         </div>
       </section>
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-4xl">
-          <ul className="divide-y divide-border border-y border-border">
-            {faqs.map((f, i) => (
-              <li key={i}>
-                <details className="group py-8">
-                  <summary className="flex cursor-pointer list-none items-baseline justify-between gap-8">
-                    <span className="font-display text-2xl font-bold group-hover:text-primary">{f.q}</span>
-                    <span className="font-mono text-xs uppercase text-muted group-open:hidden">Open +</span>
-                    <span className="hidden font-mono text-xs uppercase text-primary group-open:inline">Close −</span>
-                  </summary>
-                  <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">{f.a}</p>
-                </details>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+
+      {faqGroups.map((group) => (
+        <section key={group.title} className="border-b border-border px-6 py-16">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="font-display text-2xl font-extrabold uppercase tracking-tight md:text-3xl">
+              {group.title}
+            </h2>
+            <div className="mt-8">
+              <FaqList items={group.items} />
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <BookBand text="Still curious? Come see the lab." />
     </SiteChrome>
   );
 }
