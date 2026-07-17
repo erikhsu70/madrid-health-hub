@@ -25,7 +25,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
+        <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-[11px] font-bold uppercase tracking-widest text-foreground md:text-[12px]">
           <MenuTrigger label="Memberships" active={open === "memberships"} onOpen={() => setOpen("memberships")} />
           <MenuTrigger label="Assessments" active={open === "assessments"} onOpen={() => setOpen("assessments")} />
           <MenuTrigger label="Tests" active={open === "tests"} onOpen={() => setOpen("tests")} />
@@ -82,7 +82,7 @@ function MenuTrigger({ label, active, onOpen }: { label: string; active: boolean
     <button
       onMouseEnter={onOpen}
       onFocus={onOpen}
-      className={`py-2 transition-colors ${active ? "text-foreground" : "hover:text-foreground"}`}
+      className={`py-2 transition-opacity ${active ? "opacity-100" : "opacity-80 hover:opacity-100"}`}
     >
       {label}
     </button>
