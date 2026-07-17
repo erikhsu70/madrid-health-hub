@@ -3,7 +3,7 @@ import { SiteChrome } from "@/components/site/SiteChrome";
 import { memberships, assessments, tests, packages, type Product } from "@/data/catalog";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
-import { BookBand } from "@/components/site/BookBand";
+
 
 export const Route = createFileRoute("/book")({
   component: BookIndex,
@@ -22,8 +22,8 @@ function BookIndex() {
     <SiteChrome>
       <section className="border-b border-border px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-6 font-mono text-xs uppercase tracking-widest text-primary">[ Book appointment ]</p>
-          <h1 className="font-display text-5xl font-extrabold tracking-tight md:text-7xl">Choose your protocol.</h1>
+          <p className="mb-6 font-mono text-xs uppercase tracking-widest text-foreground">[ Book appointment ]</p>
+          <h1 className="font-display text-5xl font-extrabold uppercase tracking-tight md:text-7xl">Book Now.</h1>
           <p className="mt-6 max-w-2xl text-lg text-muted">
             Every item can be booked for yourself or purchased as a gift card. Your cart is saved
             automatically.
@@ -35,8 +35,6 @@ function BookIndex() {
       <CatalogSection title="Complete Assessments" items={assessments} />
       <CatalogSection title="Individual Tests" items={tests} />
       <CatalogSection title="Buy Packages" items={packages} />
-
-      <BookBand text="Ready to review your cart?" />
     </SiteChrome>
   );
 }
@@ -46,7 +44,7 @@ function CatalogSection({ title, items }: { title: string; items: Product[] }) {
     <section className="border-b border-border px-6 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex items-baseline justify-between">
-          <h2 className="font-display text-3xl font-extrabold uppercase italic tracking-tight md:text-4xl">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight md:text-4xl">
             {title}
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
