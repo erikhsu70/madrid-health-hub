@@ -17,15 +17,12 @@ export function SiteHeader() {
       onMouseLeave={() => setOpen(null)}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <Link to="/" className="flex flex-col items-start leading-none">
+        <Link to="/" className="flex items-center leading-none">
           <img
             src="/volumes-lab-logo.png"
             alt="Volumes Lab"
             className="h-5 w-auto md:h-6"
           />
-          <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.25em] text-muted">
-            Volumes Lab
-          </span>
         </Link>
 
         <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
