@@ -173,7 +173,7 @@ export const tests: Product[] = [
     categoryLabel: "Individual Test",
     measures: ["Peak grip force", "Left-right asymmetry", "Age-normed percentile"],
     protocol: ["Warm-up.", "Standardised handgrip trials.", "Instant percentile scoring."],
-    goodFor: ["Everyone — grip strength is one of the strongest predictors of longevity"],
+    goodFor: ["Everyone, grip strength is one of the strongest predictors of longevity"],
     giftable: true,
   },
   {
@@ -220,7 +220,7 @@ export const tests: Product[] = [
 export const packages: Product[] = [
   {
     slug: "cardio-pack-4",
-    name: "Cardio Pack — 4 sessions",
+    name: "Cardio Pack, 4 sessions",
     tagline: "Four VO2max-informed cardio sessions with a coach.",
     price: 320,
     category: "package",
@@ -232,7 +232,7 @@ export const packages: Product[] = [
   },
   {
     slug: "pt-pack-10",
-    name: "Personal Training — 10 sessions",
+    name: "Personal Training, 10 sessions",
     tagline: "Ten 1:1 sessions with one of our performance coaches.",
     price: 750,
     category: "package",

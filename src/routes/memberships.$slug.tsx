@@ -14,13 +14,13 @@ export const Route = createFileRoute("/memberships/$slug")({
     loaderData
       ? {
           meta: [
-            { title: `${loaderData.product.name} Membership — Volumes Lab Madrid` },
+            { title: `${loaderData.product.name} Membership, Volumes Lab Madrid` },
             { name: "description", content: loaderData.product.tagline },
-            { property: "og:title", content: `${loaderData.product.name} — Volumes Lab` },
+            { property: "og:title", content: `${loaderData.product.name}, Volumes Lab` },
             { property: "og:description", content: loaderData.product.tagline },
           ],
         }
-      : { meta: [{ title: "Membership — Volumes Lab" }] },
+      : { meta: [{ title: "Membership, Volumes Lab" }] },
   notFoundComponent: () => (
     <SiteChrome>
       <div className="mx-auto max-w-7xl px-6 py-32 text-center">
