@@ -2,20 +2,21 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-foreground px-6 pb-12 pt-24 text-white">
+    <footer className="bg-foreground px-6 pb-12 pt-24 text-primary-foreground">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-24 grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-6">
-          <div className="col-span-2">
-            <p className="mb-8 font-display text-4xl font-extrabold uppercase tracking-tighter">
-              Volumes<span className="text-primary">.</span>
-            </p>
-            <p className="max-w-xs text-sm text-zinc-400">
-              A medical performance lab designed for the pursuit of physical and cognitive longevity.
-              Calle Churruca 5, Madrid.
+        <div className="mb-24 grid grid-cols-2 gap-12 md:grid-cols-4">
+          <div className="col-span-2 md:col-span-1">
+            <img
+              src="/volumes-lab-logo.png"
+              alt="Volumes Lab"
+              className="mb-4 h-6 w-auto brightness-0 invert"
+            />
+            <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-400">
+              Calle Churruca 5, Madrid
             </p>
           </div>
           <FooterCol title="Services">
-            <FooterLink to="/book">Book Appointment</FooterLink>
+            <FooterLink to="/book">Book Now</FooterLink>
             <FooterLink to="/memberships/health-performance">Memberships</FooterLink>
             <FooterLink to="/assessments/foundations">Assessments</FooterLink>
             <FooterLink to="/tests/vo2max">Individual Tests</FooterLink>
@@ -27,33 +28,33 @@ export function SiteFooter() {
             <FooterLink to="/faq">Privacy</FooterLink>
             <FooterLink to="/faq">Terms</FooterLink>
           </FooterCol>
-          <div className="col-span-2">
-            <p className="mb-6 font-mono text-[10px] uppercase tracking-widest text-zinc-500">Social</p>
-            <div className="flex gap-6 text-sm text-zinc-300">
+          <FooterCol title="Follow">
+            <li>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="underline decoration-zinc-700 underline-offset-4 hover:decoration-primary"
+                className="hover:opacity-70"
               >
                 Instagram
               </a>
+            </li>
+            <li>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="underline decoration-zinc-700 underline-offset-4 hover:decoration-primary"
+                className="hover:opacity-70"
               >
                 LinkedIn
               </a>
-            </div>
-          </div>
+            </li>
+          </FooterCol>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 md:flex-row">
           <p className="font-mono text-[10px] uppercase text-zinc-500">
-            Volumes Health & Performance Lab © {new Date().getFullYear()}
+            Volumes Lab © {new Date().getFullYear()}
           </p>
-          <p className="font-mono text-[10px] uppercase text-zinc-500">Designed for longevity</p>
         </div>
       </div>
     </footer>
@@ -72,7 +73,7 @@ function FooterCol({ title, children }: { title: string; children: React.ReactNo
 function FooterLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
     <li>
-      <Link to={to} className="hover:text-primary">
+      <Link to={to} className="hover:opacity-70">
         {children}
       </Link>
     </li>

@@ -13,40 +13,43 @@ export function SiteHeader() {
 
   return (
     <nav
-      className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md"
+      className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md"
       onMouseLeave={() => setOpen(null)}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-12">
-          <Link to="/" className="font-display text-xl font-extrabold uppercase tracking-tighter">
-            Volumes<span className="text-primary">.</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+        <Link to="/" className="flex flex-col items-start leading-none">
+          <img
+            src="/volumes-lab-logo.png"
+            alt="Volumes Lab"
+            className="h-5 w-auto md:h-6"
+          />
+          <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.25em] text-muted">
+            Volumes Lab
+          </span>
+        </Link>
+
+        <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
+          <MenuTrigger label="Memberships" active={open === "memberships"} onOpen={() => setOpen("memberships")} />
+          <MenuTrigger label="Assessments" active={open === "assessments"} onOpen={() => setOpen("assessments")} />
+          <MenuTrigger label="Tests" active={open === "tests"} onOpen={() => setOpen("tests")} />
+          <Link to="/blog" className="py-2 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
+            Journal
           </Link>
-          <div className="hidden gap-8 font-mono text-[11px] uppercase tracking-widest text-muted md:flex">
-            <MenuTrigger label="Memberships" active={open === "memberships"} onOpen={() => setOpen("memberships")} />
-            <MenuTrigger label="Assessments" active={open === "assessments"} onOpen={() => setOpen("assessments")} />
-            <MenuTrigger label="Tests" active={open === "tests"} onOpen={() => setOpen("tests")} />
-            <Link to="/blog" className="py-5 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
-              Journal
-            </Link>
-            <Link to="/faq" className="py-5 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
-              FAQ
-            </Link>
-            <Link to="/contact" className="py-5 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
-              Contact
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="hidden font-mono text-[10px] text-muted lg:block">MADRID // CHURRUCA 5</span>
+          <Link to="/faq" className="py-2 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
+            FAQ
+          </Link>
+          <Link to="/contact" className="py-2 hover:text-foreground" onMouseEnter={() => setOpen(null)}>
+            Contact
+          </Link>
           <button
             onClick={() => setCartOpen(true)}
-            className="relative rounded border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-widest hover:border-foreground"
+            className="relative border border-border px-3 py-2 tracking-widest hover:border-foreground"
           >
-            Cart{count > 0 && <span className="ml-2 text-primary">[{count}]</span>}
+            Cart{count > 0 && <span className="ml-2 text-foreground">[{count}]</span>}
           </button>
           <Link
             to="/book"
-            className="bg-foreground px-5 py-2 font-mono text-[11px] uppercase tracking-widest text-white transition-colors hover:bg-primary"
+            className="bg-foreground px-4 py-2 tracking-widest text-primary-foreground hover:opacity-80"
           >
             Book Now
           </Link>
@@ -54,7 +57,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="absolute left-0 top-16 w-full border-b border-border bg-background shadow-lg">
+        <div className="absolute left-0 top-full w-full border-b border-border bg-background shadow-lg">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-10 md:grid-cols-3">
             {open === "memberships" && (
               <MenuColumn label="Memberships" items={memberships.map((m) => ({ to: `/memberships/${m.slug}`, name: m.name, sub: m.tagline }))} />
@@ -82,7 +85,7 @@ function MenuTrigger({ label, active, onOpen }: { label: string; active: boolean
     <button
       onMouseEnter={onOpen}
       onFocus={onOpen}
-      className={`py-5 transition-colors ${active ? "text-foreground" : "hover:text-foreground"}`}
+      className={`py-2 transition-colors ${active ? "text-foreground" : "hover:text-foreground"}`}
     >
       {label}
     </button>
@@ -98,12 +101,12 @@ function MenuColumn({
 }) {
   return (
     <div>
-      <p className="mb-6 font-mono text-[10px] uppercase tracking-widest text-primary">{label}</p>
+      <p className="mb-6 font-mono text-[10px] uppercase tracking-widest text-foreground">{label}</p>
       <ul className="space-y-4">
         {items.map((i) => (
           <li key={i.to}>
             <Link to={i.to} className="group block">
-              <p className="font-display text-lg font-bold group-hover:text-primary">{i.name}</p>
+              <p className="font-display text-lg font-bold uppercase group-hover:opacity-70">{i.name}</p>
               <p className="mt-1 text-xs text-muted">{i.sub}</p>
             </Link>
           </li>
