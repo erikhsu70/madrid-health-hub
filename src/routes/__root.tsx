@@ -74,21 +74,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Volumes — Human Performance Testing & Training in Madrid" },
+      { title: "test" },
       {
         name: "description",
         content:
-          "Volumes is Madrid's first boutique Human Health & Performance Lab. VO2max, strength, mobility, body composition, peptides and personal training on Calle Churruca 5.",
+          "test",
       },
       { name: "author", content: "Volumes Lab" },
-      { property: "og:title", content: "Volumes — Human Performance Testing & Training in Madrid" },
+      { property: "og:title", content: "test" },
       {
         property: "og:description",
         content:
-          "Madrid's first boutique Human Health & Performance Lab. Testing, training and medical oversight under one roof.",
+          "test",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "test" },
+      { name: "twitter:description", content: "test" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a5097956-cef1-436c-8e11-b4e1c7453b0e/id-preview-1b7b68f1--4abebc4b-97b2-4e7a-b0ea-3ffed00a3619.lovable.app-1784290539568.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a5097956-cef1-436c-8e11-b4e1c7453b0e/id-preview-1b7b68f1--4abebc4b-97b2-4e7a-b0ea-3ffed00a3619.lovable.app-1784290539568.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
