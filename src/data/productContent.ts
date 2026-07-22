@@ -660,11 +660,17 @@ export const testimonials: { quote: string; name: string; detail: string; catego
   },
 ];
 
-export const teamCredentials: { role: string; detail: string }[] = [
-  { role: "Medical Director", detail: "Sports & exercise medicine, 15+ yrs clinical practice" },
-  { role: "Performance Coach", detail: "MSc Sport Science, ex-national team S&C" },
-  { role: "Exercise Physiologist", detail: "PhD, cardiopulmonary exercise testing" },
-  { role: "Registered Dietitian", detail: "Clinical & performance nutrition" },
+export const teamCredentials: { name: string; role: string; detail: string }[] = [
+  {
+    name: "Dr. Rodrigo Ortega",
+    role: "Medical Director",
+    detail: "Sports cardiologist (QuirónSalud Madrid · Olympia), PhD cum laude, CNIC researcher, National End-of-Degree Award 2023",
+  },
+  {
+    name: "Mauricio Serrano Richards",
+    role: "Head Performance Coach",
+    detail: "MSc Sports Physiotherapy & Reconditioning, formerly Club Puebla (Liga MX first team), rehab internship at Atlético de Madrid",
+  },
 ];
 
 export function getProductContent(slug: string): ProductContent | undefined {

@@ -63,7 +63,7 @@ function Contact() {
                 </a>
               }
             />
-            <InfoRow label="Hours" value={<>Mon–Fri · 07:00–21:00<br />Sat · 09:00–14:00</>} />
+            <InfoRow label="Hours" value={<>Mon–Fri · 07:00–20:00<br />Sat–Sun · 09:00–18:00</>} />
 
             <form
               onSubmit={(e) => {
@@ -105,7 +105,8 @@ function Contact() {
               <ul className="divide-y divide-border">
                 {teamCredentials.map((t) => (
                   <li key={t.role} className="px-6 py-4">
-                    <p className="font-display text-lg font-bold uppercase tracking-tight">{t.role}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-warm">{t.name}</p>
+                    <p className="mt-1 font-display text-lg font-bold uppercase tracking-tight">{t.role}</p>
                     <p className="mt-1 text-sm text-muted">{t.detail}</p>
                   </li>
                 ))}
