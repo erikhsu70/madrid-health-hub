@@ -12,10 +12,10 @@ function Home() {
       {/* Intro */}
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
-          <h1 className="font-mono text-[12px] font-bold uppercase tracking-widest">
+          <h1 className="max-w-3xl font-mono text-2xl font-bold uppercase leading-tight tracking-wide md:text-4xl">
             Madrid's first boutique Human Health &amp; Performance Lab
           </h1>
-          <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-muted">
+          <p className="mt-5 font-mono text-[11px] uppercase tracking-widest text-muted md:text-xs">
             <a
               href="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain"
               target="_blank"
