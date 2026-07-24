@@ -10,22 +10,27 @@ function Home() {
   return (
     <SiteChrome>
       {/* Intro */}
-      <section className="px-6 py-20 md:py-28">
+      <section className="px-6 pb-16 pt-10 md:pb-20 md:pt-12">
         <div className="mx-auto max-w-7xl">
-          <h1 className="max-w-3xl font-mono text-2xl font-bold uppercase leading-tight tracking-wide md:text-4xl">
-            Madrid's first boutique Human Health &amp; Performance Lab
-          </h1>
-          <p className="mt-5 font-mono text-[11px] uppercase tracking-widest text-muted md:text-xs">
-            <a
-              href="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain"
-              target="_blank"
-              rel="noreferrer"
-              className="underline decoration-foreground/30 underline-offset-4 hover:text-foreground hover:decoration-foreground"
-            >
-              Calle Churruca 5, Centro (28004)
-            </a>
-          </p>
-          <div className="mt-12 space-y-6 text-lg leading-relaxed text-foreground/85">
+          <div className="flex items-center gap-6 md:gap-10">
+            <img src="/volumes-mark.png" alt="Volumes Lab" className="w-20 shrink-0 opacity-90 md:w-28" />
+            <div>
+              <h1 className="font-mono text-base font-bold uppercase leading-snug tracking-wide md:text-xl">
+                Madrid's first boutique Human Health &amp; Performance Lab
+              </h1>
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-muted md:text-[11px]">
+                <a
+                  href="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-foreground/30 underline-offset-4 hover:text-foreground hover:decoration-foreground"
+                >
+                  Calle Churruca 5, Centro (28004)
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
             <p>
               Volumes' medical and performance team measures VO2max, strength, mobility, metabolism
               and body composition, then turns the results into a clear, personalised plan.
@@ -56,7 +61,7 @@ function Home() {
           <iframe
             title="Volumes Lab, Calle Churruca 5, Madrid"
             src="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain&output=embed"
-            className="h-[420px] w-full grayscale md:h-[560px]"
+            className="h-[420px] w-full md:h-[560px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
