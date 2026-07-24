@@ -17,13 +17,13 @@ export function SiteHeader() {
       className="relative z-50 border-b border-border bg-background/95 backdrop-blur-md"
       onMouseLeave={() => setOpen(null)}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-6">
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
           className="flex items-center leading-none"
         >
-          <img src="/volumes-mark.png" alt="Volumes Lab" className="h-8 w-auto" />
+          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-32 opacity-90 md:w-44" />
         </Link>
 
         {/* Desktop nav */}
