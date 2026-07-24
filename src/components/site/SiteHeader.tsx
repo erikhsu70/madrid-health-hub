@@ -23,7 +23,7 @@ export function SiteHeader() {
           onClick={() => setMobileOpen(false)}
           className="flex items-center leading-none"
         >
-          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-32 opacity-90 md:w-44" />
+          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-24 opacity-90 md:w-32" />
         </Link>
 
         {/* Desktop nav */}
