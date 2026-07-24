@@ -12,10 +12,7 @@ function Home() {
       {/* Intro */}
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
-          <img src="/volumes-mark.png" alt="" aria-hidden className="w-24 opacity-90 md:w-32" />
-          <p className="mt-4 font-mono text-[11px] font-bold uppercase tracking-widest">
-            Volumes Lab
-          </p>
+          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-32 opacity-90 md:w-44" />
           <h1 className="mt-10 max-w-3xl font-mono text-2xl font-bold uppercase leading-tight tracking-wide md:text-4xl">
             Madrid's first boutique Human Health &amp; Performance Lab
           </h1>

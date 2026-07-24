@@ -21,12 +21,9 @@ export function SiteHeader() {
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="flex items-center gap-3 leading-none"
+          className="flex items-center leading-none"
         >
-          <img src="/volumes-mark.png" alt="" className="h-6 w-6" />
-          <span className="font-mono text-[13px] font-bold uppercase tracking-widest">
-            Volumes Lab
-          </span>
+          <img src="/volumes-mark.png" alt="Volumes Lab" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop nav */}

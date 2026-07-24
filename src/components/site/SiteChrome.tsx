@@ -12,8 +12,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <main>{children}</main>
       <SiteFooter />
       <div className="border-t border-border px-6 py-20 text-center">
-        <img src="/volumes-mark.png" alt="Volumes Lab" className="mx-auto w-40 opacity-90 md:w-56" />
-        <p className="mt-6 font-mono text-[11px] font-bold uppercase tracking-widest">Volumes Lab</p>
+        <img src="/volumes-mark.png" alt="Volumes Lab" className="mx-auto w-48 opacity-90 md:w-64" />
       </div>
     </div>
   );
