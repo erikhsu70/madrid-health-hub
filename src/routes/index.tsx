@@ -12,7 +12,11 @@ function Home() {
       {/* Intro */}
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-7xl">
-          <h1 className="max-w-3xl font-mono text-2xl font-bold uppercase leading-tight tracking-wide md:text-4xl">
+          <img src="/volumes-mark.png" alt="" aria-hidden className="w-24 opacity-90 md:w-32" />
+          <p className="mt-4 font-mono text-[11px] font-bold uppercase tracking-widest">
+            Volumes Lab
+          </p>
+          <h1 className="mt-10 max-w-3xl font-mono text-2xl font-bold uppercase leading-tight tracking-wide md:text-4xl">
             Madrid's first boutique Human Health &amp; Performance Lab
           </h1>
           <p className="mt-5 font-mono text-[11px] uppercase tracking-widest text-muted md:text-xs">
@@ -25,7 +29,7 @@ function Home() {
               Calle Churruca 5, Centro (28004)
             </a>
           </p>
-          <div className="mt-12 max-w-2xl space-y-6 text-lg leading-relaxed text-foreground/85">
+          <div className="mt-12 space-y-6 text-lg leading-relaxed text-foreground/85">
             <p>
               Volumes' medical and performance team measures VO2max, strength, mobility, metabolism
               and body composition, then turns the results into a clear, personalised plan.
@@ -51,17 +55,19 @@ function Home() {
       </section>
 
       {/* Map */}
-      <section className="border-t border-border">
-        <iframe
-          title="Volumes Lab, Calle Churruca 5, Madrid"
-          src="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain&output=embed"
-          className="h-[420px] w-full grayscale md:h-[560px]"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-        <p className="border-t border-border px-6 py-4 text-sm text-foreground/85">
-          Monday–Friday: 7am–8pm <span className="mx-2 text-muted">/</span> Saturday–Sunday: 9am–6pm
-        </p>
+      <section className="border-t border-border px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <iframe
+            title="Volumes Lab, Calle Churruca 5, Madrid"
+            src="https://www.google.com/maps?q=Calle+Churruca+5,+Madrid,+Spain&output=embed"
+            className="h-[420px] w-full grayscale md:h-[560px]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <p className="border-t border-border pt-4 text-sm text-foreground/85">
+            Monday–Friday: 7am–8pm <span className="mx-2 text-muted">/</span> Saturday–Sunday: 9am–6pm
+          </p>
+        </div>
       </section>
 
       {/* What we offer */}
