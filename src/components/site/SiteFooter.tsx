@@ -35,12 +35,10 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
-        <div className="mt-12 flex justify-center">
-          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-24 opacity-90" />
-        </div>
-        <div className="mt-8 flex flex-col gap-2 border-t border-border pt-6 font-mono text-[10px] uppercase tracking-widest text-muted md:flex-row md:items-center md:justify-between">
-          <p>Volumes Lab © {new Date().getFullYear()}</p>
-          <p>Calle Churruca 5 Madrid</p>
+        <div className="mt-12 grid grid-cols-[auto_1fr_auto] items-center gap-4 border-t border-border pt-6 font-mono text-[10px] uppercase tracking-widest text-muted">
+          <img src="/volumes-mark.png" alt="Volumes Lab" className="w-16 opacity-90" />
+          <p className="text-center">Volumes Lab © {new Date().getFullYear()}</p>
+          <p className="text-right">Calle Churruca 5 Madrid</p>
         </div>
       </div>
     </footer>
