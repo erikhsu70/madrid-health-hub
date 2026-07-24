@@ -23,7 +23,7 @@ export function SiteHeader() {
           onClick={() => setMobileOpen(false)}
           className="flex items-center gap-3 leading-none"
         >
-          <img src="/volumes-icon.png" alt="" className="h-6 w-6" />
+          <img src="/volumes-icon.png" alt="" className="h-8 w-8" />
           <span className="font-mono text-[13px] font-bold uppercase tracking-widest">
             Volumes Lab
           </span>
