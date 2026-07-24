@@ -51,13 +51,13 @@ export const productContent: Record<string, ProductContent> = {
       "A trendline, not a snapshot: watch VO2max, strength and body composition move.",
     ],
     measuresDetail: [
-      { name: "Quarterly retesting", why: "Every 12 weeks we re-measure the full Foundations battery, so progress is objective." },
+      { name: "Quarterly retesting", why: "Every 12 weeks we re-measure the full Foundational battery, so progress is objective." },
       { name: "1:1 personal training", why: "Weekly sessions programmed from your latest results, not a generic template." },
       { name: "Nutrition guidance", why: "Caloric and protein targets tied to your measured metabolic rate." },
       { name: "Medical oversight", why: "Our clinical team reviews every report and flags what training alone can't fix." },
     ],
     experience: [
-      { title: "Month 1, Baseline", body: "Full Foundations assessment, goal-setting with your coach, and your first training block." },
+      { title: "Month 1, Baseline", body: "Full Foundational assessment, goal-setting with your coach, and your first training block." },
       { title: "Months 2–3, Build", body: "Weekly 1:1 sessions, nutrition targets, and direct message access to the team." },
       { title: "Every quarter, Prove it", body: "Retest, review the trendline with your coach and physician, rewrite the plan." },
     ],
@@ -138,7 +138,7 @@ export const productContent: Record<string, ProductContent> = {
       { title: "Clinical debrief", body: "We walk through every number, what it means, and your written action plan." },
     ],
     sampleReport: {
-      title: "Sample Foundations report",
+      title: "Sample Foundational report",
       metrics: [
         { label: "Body fat", value: "18.4%", percentile: 61 },
         { label: "Grip strength", value: "44 kg", percentile: 72 },
@@ -171,7 +171,7 @@ export const productContent: Record<string, ProductContent> = {
       { name: "Mobility", why: "Movement quality today is independence in your seventies." },
     ],
     experience: [
-      { title: "Foundations battery", body: "The complete Foundations protocol: body composition, grip, mobility, metabolic rate." },
+      { title: "Foundational battery", body: "The complete Foundational protocol: body composition, grip, mobility, metabolic rate." },
       { title: "VO2max & bone density", body: "Graded exercise test to exhaustion, then a clinical bone density scan of hip and spine." },
       { title: "Physician review", body: "Cardio-metabolic screening and a 12-month longevity roadmap, delivered in person." },
     ],
@@ -224,7 +224,7 @@ export const productContent: Record<string, ProductContent> = {
       footnote: "Sample data from a sub-3h marathon profile.",
     },
     prep: ["Come rested, no hard sessions for 48 hours.", "Bring your usual running or cycling kit and shoes."],
-    notFor: ["Complete beginners, Foundations will serve you better first."],
+    notFor: ["Complete beginners, Foundational will serve you better first."],
     faqs: [
       { q: "Treadmill or bike?", a: "Either. We test on the modality you compete in, treadmill for runners, ergometer for cyclists and triathletes." },
       { q: "Can my coach get the results?", a: "Yes, with your permission we share the full report and zones directly with them." },
@@ -578,7 +578,7 @@ export const productContent: Record<string, ProductContent> = {
       ],
       footnote: "Sample data from a 10-week block.",
     },
-    prep: ["An assessment first helps us programme precisely, Foundations is ideal."],
+    prep: ["An assessment first helps us programme precisely, Foundational is ideal."],
     notFor: ["Anyone wanting medical testing, this is coaching only."],
     faqs: [
       { q: "Can I split sessions across the week?", a: "Yes, most clients do two sessions per week and finish in five to eight weeks." },
@@ -589,12 +589,12 @@ export const productContent: Record<string, ProductContent> = {
     illustration: "retest",
     heroProof: ["4 retests / 12 months", "Save €270 vs. booking separately", "Trendline report"],
     outcomes: [
-      "Four Foundations retests across twelve months, your year in data.",
+      "Four Foundational retests across twelve months, your year in data.",
       "A trendline report after each retest: what moved, what didn't, what to change.",
       "The accountability of a booked date every 12 weeks.",
     ],
     measuresDetail: [
-      { name: "4 x Foundations retests", why: "The same battery, the same equipment, the same protocol, comparable data, every time." },
+      { name: "4 x Foundational retests", why: "The same battery, the same equipment, the same protocol, comparable data, every time." },
     ],
     experience: [
       { title: "Q1, Baseline", body: "Your first retest sets the year's reference point." },
@@ -610,8 +610,8 @@ export const productContent: Record<string, ProductContent> = {
       ],
       footnote: "Sample data from a 12-month training year.",
     },
-    prep: ["Same prep as every Foundations visit, fasted, 4 hours."],
-    notFor: ["Anyone who hasn't done a Foundations assessment yet, start there."],
+    prep: ["Same prep as every Foundational visit, fasted, 4 hours."],
+    notFor: ["Anyone who hasn't done a Foundational assessment yet, start there."],
     faqs: [
       { q: "What if I miss a quarter?", a: "Retests can shift by a couple of weeks either side; the bundle stays valid for 14 months." },
     ],
@@ -631,19 +631,19 @@ export const testimonials: { quote: string; name: string; detail: string; catego
   {
     quote: "First time anyone explained my numbers instead of handing me a PDF. I left knowing exactly what to do on Monday.",
     name: "Carmen L.",
-    detail: "Foundations assessment · Madrid",
+    detail: "Foundational assessment · Madrid",
     category: "assessment",
   },
   {
     quote: "Down 8 kilos in four months, and the scans proved I kept my muscle. That last part is why I chose a medical programme.",
     name: "Jorge A.",
-    detail: "GLP-1 Program · Madrid",
+    detail: "Body Recomposition (GLP-1) · Madrid",
     category: "membership",
   },
   {
     quote: "My coach programmes from my retests, not from a template. Two quarters in, every marker is moving the right way.",
     name: "Elena V.",
-    detail: "Health & Performance member",
+    detail: "Human Performance member",
     category: "membership",
   },
   {
@@ -653,7 +653,7 @@ export const testimonials: { quote: string; name: string; detail: string; catego
     category: "test",
   },
   {
-    quote: "Bought the Foundations assessment as a gift for my father. He now talks about his grip percentile at family dinners.",
+    quote: "Bought the Foundational assessment as a gift for my father. He now talks about his grip percentile at family dinners.",
     name: "Lucía M.",
     detail: "Gift card · Madrid",
     category: "package",

@@ -35,7 +35,7 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "How long will I be in the lab?",
-        a: "Individual tests run 15–60 minutes, the Foundations assessment 90 minutes, and the Longevity and Performance assessments around 3 hours, including your debrief.",
+        a: "Individual tests run 15–60 minutes, the Foundational assessment 90 minutes, and the Longevity and Performance assessments around 3 hours, including your debrief.",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       },
       {
         q: "Do you offer memberships?",
-        a: "Yes, our Health & Performance and GLP-1 memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
+        a: "Yes, our Human Performance and Body Recomposition memberships combine testing, personal training and medical oversight. See the Memberships section for details.",
       },
       {
         q: "What languages do you speak?",

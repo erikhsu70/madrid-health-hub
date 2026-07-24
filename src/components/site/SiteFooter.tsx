@@ -2,71 +2,45 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-foreground px-6 pb-12 pt-24 text-primary-foreground">
+    <footer className="border-t border-border px-6 py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-24 grid grid-cols-2 gap-12 md:grid-cols-4">
-          <div className="col-span-2 md:col-span-1">
-            <img
-              src="/volumes-lab-logo.png"
-              alt="Volumes Lab"
-              className="mb-4 h-8 w-auto invert"
-            />
-            <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-400">
-              Calle Churruca 5, Madrid
-            </p>
-          </div>
-          <FooterCol title="Services">
+        <div className="grid gap-10 font-mono text-[10px] font-bold uppercase tracking-widest sm:grid-cols-2 md:grid-cols-3">
+          <ul className="space-y-3">
             <FooterLink to="/book">Book Now</FooterLink>
             <FooterLink to="/memberships/health-performance">Memberships</FooterLink>
             <FooterLink to="/assessments/foundations">Assessments</FooterLink>
             <FooterLink to="/tests/vo2max">Individual Tests</FooterLink>
-          </FooterCol>
-          <FooterCol title="Studio">
-            <FooterLink to="/blog">Journal</FooterLink>
+          </ul>
+          <ul className="space-y-3">
+            <FooterLink to="/blog">Blog</FooterLink>
             <FooterLink to="/faq">FAQ</FooterLink>
-            <FooterLink to="/contact">Contact</FooterLink>
             <FooterLink to="/faq">Privacy</FooterLink>
             <FooterLink to="/faq">Terms</FooterLink>
-          </FooterCol>
-          <FooterCol title="Follow">
+          </ul>
+          <ul className="space-y-3">
             <li>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:opacity-70"
-              >
+              <a href="mailto:hello@volumeslab.com" className="hover:opacity-70">
+                hello@volumeslab.com
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:opacity-70">
                 Instagram
               </a>
             </li>
             <li>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:opacity-70"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:opacity-70">
                 LinkedIn
               </a>
             </li>
-          </FooterCol>
+          </ul>
         </div>
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 md:flex-row">
-          <p className="font-mono text-[10px] uppercase text-zinc-500">
-            Volumes Lab © {new Date().getFullYear()}
-          </p>
+        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 font-mono text-[10px] uppercase tracking-widest text-muted md:flex-row md:items-center md:justify-between">
+          <p>Volumes Lab © {new Date().getFullYear()}</p>
+          <p>Calle Churruca 5 Madrid</p>
         </div>
       </div>
     </footer>
-  );
-}
-
-function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <p className="mb-6 font-mono text-[10px] uppercase tracking-widest text-zinc-500">{title}</p>
-      <ul className="space-y-3 text-sm text-zinc-300">{children}</ul>
-    </div>
   );
 }
 

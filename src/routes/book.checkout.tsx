@@ -43,7 +43,7 @@ function Checkout() {
             <div className="border border-border p-12 text-center">
               <p className="text-lg text-muted">Your cart is empty.</p>
               <p className="mt-2 text-sm text-muted">
-                Not sure where to start? The Foundations assessment is our most popular first visit.
+                Not sure where to start? The Foundational assessment is our most popular first visit.
               </p>
               <Link
                 to="/book"

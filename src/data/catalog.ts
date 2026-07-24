@@ -15,7 +15,7 @@ export type Product = {
 export const memberships: Product[] = [
   {
     slug: "health-performance",
-    name: "Health & Performance",
+    name: "Human Performance",
     tagline: "Personal training, medical oversight and regular retesting under one membership.",
     price: 450,
     duration: "per month",
@@ -23,7 +23,7 @@ export const memberships: Product[] = [
     categoryLabel: "Membership",
     measures: ["Quarterly retesting", "1:1 personal training", "Nutrition guidance", "Medical oversight"],
     protocol: [
-      "Initial Foundations assessment to set your baseline.",
+      "Initial Foundational assessment to set your baseline.",
       "Weekly 1:1 training sessions with your dedicated coach.",
       "Ongoing medical oversight from our clinical team.",
       "Quarterly retesting to track your progress objectively.",
@@ -33,7 +33,7 @@ export const memberships: Product[] = [
   },
   {
     slug: "glp-1",
-    name: "GLP-1 Program",
+    name: "Body Recomposition (GLP-1)",
     tagline: "Physician-led peptide therapy combining GLP-1 agonists with training and testing.",
     price: 550,
     duration: "per month",
@@ -54,7 +54,7 @@ export const memberships: Product[] = [
 export const assessments: Product[] = [
   {
     slug: "foundations",
-    name: "Foundations",
+    name: "Foundational",
     tagline: "Your baseline snapshot across strength, mobility, metabolism and body composition.",
     price: 490,
     duration: "90 minutes",
@@ -80,7 +80,7 @@ export const assessments: Product[] = [
     categoryLabel: "Complete Assessment",
     measures: ["VO2max", "Bone Mineral Density", "3-D Body Composition", "Metabolic Assessment", "Mobility"],
     protocol: [
-      "Foundations tests plus VO2max and bone density scan.",
+      "Foundational tests plus VO2max and bone density scan.",
       "Cardio-metabolic screening with our physician.",
       "Longevity-focused report with 12-month recommendations.",
     ],
@@ -249,7 +249,7 @@ export const packages: Product[] = [
     price: 690,
     category: "package",
     categoryLabel: "Package",
-    measures: ["4 x Foundations retests"],
+    measures: ["4 x Foundational retests"],
     protocol: ["Booked every 12 weeks."],
     goodFor: ["Anyone tracking progress objectively over a year"],
     giftable: true,

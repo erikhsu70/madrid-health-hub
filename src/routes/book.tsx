@@ -76,7 +76,7 @@ function BookIndex() {
             >
               <p className="font-mono text-[10px] uppercase tracking-widest opacity-70">Most popular</p>
               <h3 className="mt-4 font-display text-2xl font-extrabold uppercase tracking-tight">
-                The Foundations assessment
+                The Foundational assessment
               </h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed opacity-80">
                 90 minutes, four pillars, body composition, strength, mobility, metabolism, and a
@@ -186,8 +186,8 @@ function ComparisonTable() {
       label: "Builds on",
       values: [
         "The baseline",
-        "Foundations + VO2max & bone density",
-        "Foundations + lactate, gait & force plates",
+        "Foundational + VO2max & bone density",
+        "Foundational + lactate, gait & force plates",
       ],
     },
     {
